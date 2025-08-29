@@ -9,6 +9,17 @@ import { ChevronRightIcon, SparklesIcon } from '@heroicons/react/24/outline'
 // Mock collections data - easily scalable
 const collections = [
   {
+    id: 'velvet-radiance',
+    name: 'Velvet Radiance',
+    description: 'Where velvet meets radiance - our most luxurious deep burgundy collection',
+    image: '/collections/velvet-radiance.jpg',
+    products: 4,
+    featured: true,
+    season: 'Exclusive',
+    tags: ['exclusive', 'luxury', 'bestseller'],
+    launchDate: '2024-08-29',
+  },
+  {
     id: 'signature',
     name: 'Signature Collection',
     description: 'Our most beloved shades that define the Veloura aesthetic',

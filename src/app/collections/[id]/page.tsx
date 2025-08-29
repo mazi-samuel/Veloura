@@ -10,6 +10,61 @@ import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid'
 
 // Mock data for collections and their products
 const collectionsData = {
+  'velvet-radiance': {
+    id: 'velvet-radiance',
+    name: 'Velvet Radiance',
+    description: 'Where velvet meets radiance - our most luxurious deep burgundy collection. Experience the perfect fusion of rich, velvety texture and luminous finish.',
+    hero_image: '/collections/velvet-radiance-hero.jpg',
+    story: 'The Velvet Radiance collection was born from our desire to create the perfect balance between sophistication and boldness. Each shade in this exclusive collection features our signature velvet formula enhanced with light-reflecting particles for an unprecedented finish.',
+    inspiration: 'Inspired by the opulent velvet drapes of grand opera houses and the warm glow of candlelight, this collection captures the essence of luxury and romance.',
+    products: [
+      {
+        id: 'velvet-burgundy',
+        name: 'Velvet Burgundy',
+        price: 32,
+        image: '/products/velvet-burgundy.jpg',
+        shade: '#722F37',
+        description: 'Deep burgundy with velvet finish and subtle radiance',
+        rating: 4.9,
+        reviews: 89,
+        bestseller: true,
+        exclusive: true,
+      },
+      {
+        id: 'velvet-wine',
+        name: 'Velvet Wine',
+        price: 32,
+        image: '/products/velvet-wine.jpg',
+        shade: '#8B1538',
+        description: 'Rich wine red with luminous undertones',
+        rating: 4.8,
+        reviews: 67,
+        exclusive: true,
+      },
+      {
+        id: 'velvet-crimson',
+        name: 'Velvet Crimson',
+        price: 32,
+        image: '/products/velvet-crimson.jpg',
+        shade: '#A0282C',
+        description: 'Bold crimson with velvety texture',
+        rating: 4.7,
+        reviews: 54,
+        exclusive: true,
+      },
+      {
+        id: 'velvet-rouge',
+        name: 'Velvet Rouge',
+        price: 32,
+        image: '/products/velvet-rouge.jpg',
+        shade: '#B91D3C',
+        description: 'Classic rouge with modern velvet finish',
+        rating: 4.8,
+        reviews: 72,
+        exclusive: true,
+      },
+    ]
+  },
   signature: {
     id: 'signature',
     name: 'Signature Collection',
@@ -125,6 +180,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {product.limited && (
           <span className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
             Limited Edition
+          </span>
+        )}
+        {product.exclusive && (
+          <span className="bg-veloura-burgundy text-white px-3 py-1 rounded-full text-xs font-semibold">
+            Exclusive
           </span>
         )}
       </div>
