@@ -18,6 +18,43 @@ const collections = [
     season: 'Exclusive',
     tags: ['exclusive', 'luxury', 'bestseller'],
     launchDate: '2024-08-29',
+    category: 'liquid-lipstick'
+  },
+  {
+    id: 'glossy-luxe',
+    name: 'Glossy Luxe',
+    description: 'High-shine lip glosses with mirror-like finish and plumping effect',
+    image: '/collections/glossy-luxe.jpg',
+    products: 8,
+    featured: true,
+    season: 'All Year',
+    tags: ['gloss', 'shine', 'plumping'],
+    launchDate: '2024-08-15',
+    category: 'lip-gloss'
+  },
+  {
+    id: 'precision-liners',
+    name: 'Precision Liners',
+    description: 'Creamy, long-wearing lip liners for perfect definition and lasting color',
+    image: '/collections/precision-liners.jpg',
+    products: 12,
+    featured: true,
+    season: 'All Year',
+    tags: ['liner', 'precision', 'long-wear'],
+    launchDate: '2024-07-01',
+    category: 'lip-liner'
+  },
+  {
+    id: 'repair-therapy',
+    name: 'Repair & Therapy',
+    description: 'Overnight treatments and protective balms for ultimate lip care',
+    image: '/collections/repair-therapy.jpg',
+    products: 6,
+    featured: false,
+    season: 'All Year',
+    tags: ['treatment', 'repair', 'spf'],
+    launchDate: '2024-06-15',
+    category: 'lip-treatment'
   },
   {
     id: 'signature',
@@ -29,6 +66,19 @@ const collections = [
     season: 'All Year',
     tags: ['bestseller', 'classic'],
     launchDate: '2024-01-15',
+    category: 'liquid-lipstick'
+  },
+  {
+    id: 'curated-sets',
+    name: 'Curated Sets',
+    description: 'Perfectly paired lip products for complete luxury routines',
+    image: '/collections/curated-sets.jpg',
+    products: 5,
+    featured: false,
+    season: 'Gift Season',
+    tags: ['sets', 'gift', 'luxury'],
+    launchDate: '2024-05-01',
+    category: 'lip-sets'
   },
   {
     id: 'limited-edition',
@@ -98,6 +148,11 @@ const CollectionsPage = () => {
     { value: 'newest', label: 'Newest' },
     { value: 'bestseller', label: 'Bestsellers' },
     { value: 'limited', label: 'Limited Edition' },
+    { value: 'liquid-lipstick', label: 'Liquid Lipsticks' },
+    { value: 'lip-gloss', label: 'Lip Glosses' },
+    { value: 'lip-liner', label: 'Lip Liners' },
+    { value: 'lip-treatment', label: 'Treatments' },
+    { value: 'lip-sets', label: 'Gift Sets' },
   ]
 
   const sortOptions = [
@@ -123,6 +178,21 @@ const CollectionsPage = () => {
         break
       case 'limited':
         filtered = filtered.filter(collection => collection.tags.includes('limited') || collection.tags.includes('exclusive'))
+        break
+      case 'liquid-lipstick':
+        filtered = filtered.filter(collection => collection.category === 'liquid-lipstick')
+        break
+      case 'lip-gloss':
+        filtered = filtered.filter(collection => collection.category === 'lip-gloss')
+        break
+      case 'lip-liner':
+        filtered = filtered.filter(collection => collection.category === 'lip-liner')
+        break
+      case 'lip-treatment':
+        filtered = filtered.filter(collection => collection.category === 'lip-treatment')
+        break
+      case 'lip-sets':
+        filtered = filtered.filter(collection => collection.category === 'lip-sets')
         break
     }
 

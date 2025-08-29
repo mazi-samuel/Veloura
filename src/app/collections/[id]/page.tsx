@@ -140,6 +140,173 @@ const collectionsData = {
       },
     ]
   },
+  'glossy-luxe': {
+    id: 'glossy-luxe',
+    name: 'Glossy Luxe',
+    description: 'High-shine lip glosses with mirror-like finish and plumping effect. Experience the ultimate in lustrous luxury with our premium gloss formula.',
+    hero_image: '/collections/glossy-luxe-hero.jpg',
+    story: 'Our Glossy Luxe collection represents the pinnacle of gloss technology. Each formula contains light-reflecting pearls and plumping peptides for an instantly fuller, more radiant pout.',
+    inspiration: 'Inspired by the gleaming surfaces of precious metals and the natural luminosity of pearls, creating an otherworldly shine.',
+    products: [
+      {
+        id: 'crystal-clear',
+        name: 'Crystal Clear',
+        price: 26,
+        image: '/products/crystal-clear-gloss.jpg',
+        shade: 'transparent',
+        description: 'Ultra-clear gloss with maximum shine and plumping effect',
+        rating: 4.8,
+        reviews: 156,
+        bestseller: true,
+        type: 'lip-gloss'
+      },
+      {
+        id: 'rose-shimmer',
+        name: 'Rose Shimmer',
+        price: 28,
+        image: '/products/rose-shimmer-gloss.jpg',
+        shade: '#E8B4B8',
+        description: 'Delicate rose with pearl shimmer',
+        rating: 4.9,
+        reviews: 134,
+        type: 'lip-gloss'
+      },
+      {
+        id: 'golden-honey-gloss',
+        name: 'Golden Honey Gloss',
+        price: 28,
+        image: '/products/golden-honey-gloss.jpg',
+        shade: '#F4D03F',
+        description: 'Warm golden gloss with honey undertones',
+        rating: 4.7,
+        reviews: 98,
+        type: 'lip-gloss'
+      },
+    ]
+  },
+  'precision-liners': {
+    id: 'precision-liners',
+    name: 'Precision Liners',
+    description: 'Creamy, long-wearing lip liners for perfect definition and lasting color. Professional-grade precision meets luxury comfort.',
+    hero_image: '/collections/precision-liners-hero.jpg',
+    story: 'Developed with makeup artists, our Precision Liners offer the perfect balance of glide and grip, allowing for effortless application and all-day wear.',
+    inspiration: 'Inspired by the precise strokes of master calligraphers and the clean lines of architectural beauty.',
+    products: [
+      {
+        id: 'nude-perfection',
+        name: 'Nude Perfection',
+        price: 22,
+        image: '/products/nude-perfection-liner.jpg',
+        shade: '#C8A882',
+        description: 'Universal nude that complements any lip color',
+        rating: 4.8,
+        reviews: 267,
+        bestseller: true,
+        type: 'lip-liner'
+      },
+      {
+        id: 'berry-definition',
+        name: 'Berry Definition',
+        price: 22,
+        image: '/products/berry-definition-liner.jpg',
+        shade: '#8B2F47',
+        description: 'Rich berry liner for bold definition',
+        rating: 4.7,
+        reviews: 189,
+        type: 'lip-liner'
+      },
+      {
+        id: 'classic-red-liner',
+        name: 'Classic Red Liner',
+        price: 22,
+        image: '/products/classic-red-liner.jpg',
+        shade: '#DC143C',
+        description: 'Timeless red for perfect lip shaping',
+        rating: 4.9,
+        reviews: 298,
+        type: 'lip-liner'
+      },
+    ]
+  },
+  'repair-therapy': {
+    id: 'repair-therapy',
+    name: 'Repair & Therapy',
+    description: 'Overnight treatments and protective balms for ultimate lip care. Advanced formulas that restore, protect, and rejuvenate.',
+    hero_image: '/collections/repair-therapy-hero.jpg',
+    story: 'Our Repair & Therapy line combines cutting-edge skincare technology with luxurious textures to provide comprehensive lip care that works while you sleep and protects throughout the day.',
+    inspiration: 'Inspired by spa treatments and dermatological advances, creating the ultimate at-home lip wellness experience.',
+    products: [
+      {
+        id: 'overnight-renewal',
+        name: 'Overnight Renewal',
+        price: 34,
+        image: '/products/overnight-renewal.jpg',
+        shade: 'clear',
+        description: 'Intensive overnight lip repair treatment',
+        rating: 4.9,
+        reviews: 145,
+        bestseller: true,
+        type: 'lip-treatment'
+      },
+      {
+        id: 'daily-defense-spf',
+        name: 'Daily Defense SPF 30',
+        price: 28,
+        image: '/products/daily-defense-spf.jpg',
+        shade: 'clear',
+        description: 'Protective lip balm with broad-spectrum SPF',
+        rating: 4.8,
+        reviews: 203,
+        type: 'lip-treatment'
+      },
+      {
+        id: 'plumping-serum',
+        name: 'Plumping Serum',
+        price: 38,
+        image: '/products/plumping-serum.jpg',
+        shade: 'clear',
+        description: 'Advanced peptide serum for fuller lips',
+        rating: 4.7,
+        reviews: 167,
+        type: 'lip-treatment'
+      },
+    ]
+  },
+  'curated-sets': {
+    id: 'curated-sets',
+    name: 'Curated Sets',
+    description: 'Perfectly paired lip products for complete luxury routines. Thoughtfully curated combinations for every occasion.',
+    hero_image: '/collections/curated-sets-hero.jpg',
+    story: 'Our Curated Sets bring together complementary products to create complete lip looks. Each set is designed by our beauty experts to deliver professional results.',
+    inspiration: 'Inspired by the art of layering and the harmony found in perfectly matched elements.',
+    products: [
+      {
+        id: 'complete-red-ritual',
+        name: 'Complete Red Ritual',
+        price: 68,
+        image: '/products/complete-red-ritual.jpg',
+        shade: '#DC143C',
+        description: 'Liner + Lipstick + Gloss in perfect red harmony',
+        rating: 4.9,
+        reviews: 89,
+        bestseller: true,
+        type: 'lip-set',
+        contents: ['Classic Red Liner', 'Signature Red Lipstick', 'Clear Gloss']
+      },
+      {
+        id: 'everyday-nude-essentials',
+        name: 'Everyday Nude Essentials',
+        price: 58,
+        image: '/products/everyday-nude-essentials.jpg',
+        shade: '#C8A882',
+        description: 'Perfect nude tones for daily elegance',
+        rating: 4.8,
+        reviews: 156,
+        type: 'lip-set',
+        contents: ['Nude Perfection Liner', 'Golden Honey Lipstick', 'Rose Shimmer Gloss']
+      },
+    ]
+  },
   // Add more collections as needed
 }
 
@@ -185,6 +352,26 @@ const ProductCard: React.FC<ProductCardProps> = ({
         {product.exclusive && (
           <span className="bg-veloura-burgundy text-white px-3 py-1 rounded-full text-xs font-semibold">
             Exclusive
+          </span>
+        )}
+        {product.type === 'lip-gloss' && (
+          <span className="bg-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            High-Shine
+          </span>
+        )}
+        {product.type === 'lip-liner' && (
+          <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            Precision
+          </span>
+        )}
+        {product.type === 'lip-treatment' && (
+          <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            Treatment
+          </span>
+        )}
+        {product.type === 'lip-set' && (
+          <span className="bg-gradient-to-r from-veloura-gold to-yellow-400 text-white px-3 py-1 rounded-full text-xs font-semibold">
+            Complete Set
           </span>
         )}
       </div>

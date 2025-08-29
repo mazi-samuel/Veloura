@@ -8,20 +8,20 @@ const USPSection = () => {
   const features = [
     {
       icon: SparklesIcon,
-      title: 'Hydrating Formula',
-      description: 'Infused with nourishing ingredients like hyaluronic acid and vitamin E for long-lasting moisture.',
+      title: 'Complete Lip System',
+      description: 'From precision liners to high-shine glosses, treatments to luxurious sets - everything for the perfect lip routine.',
       color: 'text-veloura-gold'
     },
     {
       icon: HeartIcon,
-      title: 'Non-Sticky Finish',
-      description: 'Luxurious velvet texture that feels weightless and comfortable on your lips all day.',
+      title: 'Luxury Formulations',
+      description: 'Each product features premium ingredients and innovative technology for professional-quality results.',
       color: 'text-veloura-burgundy'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Skincare-Infused',
-      description: 'Enriched with antioxidants and peptides that care for your lips while delivering stunning color.',
+      title: 'Skincare-Infused Beauty',
+      description: 'Advanced lip care meets luxury color with hydrating, protecting, and rejuvenating formulas.',
       color: 'text-veloura-gold'
     }
   ]
@@ -40,8 +40,8 @@ const USPSection = () => {
             The Veloura Difference
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Experience the perfect fusion of luxury beauty and advanced skincare. 
-            Our revolutionary formula delivers uncompromising glamour while nurturing your lips.
+            Experience the complete luxury lip experience with our expanded range of premium products. 
+            From everyday essentials to special occasion glamour, discover your perfect lip ritual.
           </p>
         </motion.div>
 
@@ -83,10 +83,10 @@ const USPSection = () => {
         >
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
             <h3 className="text-3xl font-serif font-bold text-veloura-burgundy mb-4">
-              Ready to Experience Luxury?
+              Ready to Experience Complete Luxury?
             </h3>
             <p className="text-gray-600 mb-8 text-lg">
-              Join thousands of women who have discovered the perfect lip gloss that combines beauty with care.
+              Discover our full range of luxury lip products - from everyday essentials to special occasion glamour.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-primary text-lg px-8 py-4">
