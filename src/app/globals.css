@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-veloura-burgundy hover:bg-veloura-burgundy-light text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-veloura-burgundy text-veloura-burgundy hover:bg-veloura-burgundy hover:text-white font-semibold py-3 px-8 rounded-md transition-all duration-300;
+  }
+  
+  .btn-gold {
+    @apply bg-veloura-gold hover:bg-veloura-gold-light text-black font-semibold py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .card-luxury {
+    @apply bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105;
+  }
+  
+  .text-luxury {
+    @apply font-serif text-veloura-burgundy;
+  }
+  
+  .gradient-gold {
+    @apply bg-gradient-to-r from-veloura-gold to-veloura-gold-light;
+  }
+  
+  .gradient-burgundy {
+    @apply bg-gradient-to-r from-veloura-burgundy to-veloura-burgundy-light;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-blur-luxury {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6C1C2C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B2C3A;
+}
+
+/* Loading animation */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Luxury hover effects */
+.luxury-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.luxury-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(108, 28, 44, 0.1);
+}
+
+/* Gold accent line */
+.gold-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(to right, #D4AF37, #E8C968);
+}
