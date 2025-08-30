@@ -90,6 +90,7 @@ const collections = [
     season: 'Spring 2024',
     tags: ['exclusive', 'limited'],
     launchDate: '2024-03-01',
+    category: 'liquid-lipstick'
   },
   {
     id: 'velvet-dreams',
@@ -101,6 +102,7 @@ const collections = [
     season: 'Fall 2024',
     tags: ['rich', 'deep'],
     launchDate: '2024-09-15',
+    category: 'liquid-lipstick'
   },
   {
     id: 'golden-hour',
@@ -112,6 +114,7 @@ const collections = [
     season: 'Summer 2024',
     tags: ['warm', 'luminous'],
     launchDate: '2024-06-01',
+    category: 'liquid-lipstick'
   },
   {
     id: 'midnight-muse',
@@ -123,6 +126,7 @@ const collections = [
     season: 'Winter 2024',
     tags: ['bold', 'mysterious'],
     launchDate: '2024-12-01',
+    category: 'liquid-lipstick'
   },
   {
     id: 'rose-garden',
@@ -134,6 +138,7 @@ const collections = [
     season: 'Spring 2024',
     tags: ['romantic', 'pink'],
     launchDate: '2024-04-15',
+    category: 'liquid-lipstick'
   },
 ]
 
@@ -171,7 +176,9 @@ const CollectionsPage = () => {
         filtered = filtered.filter(collection => collection.featured)
         break
       case 'newest':
-        filtered = filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()).slice(0, 3)
+        // For newest filter, show only the 3 most recent collections
+        const sortedByDate = [...filtered].sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
+        filtered = sortedByDate.slice(0, 3)
         break
       case 'bestseller':
         filtered = filtered.filter(collection => collection.tags.includes('bestseller'))
@@ -196,20 +203,27 @@ const CollectionsPage = () => {
         break
     }
 
-    // Apply sorting
-    switch (sortBy) {
-      case 'featured':
-        filtered.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
-        break
-      case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-        break
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name))
-        break
-      case 'products':
-        filtered.sort((a, b) => b.products - a.products)
-        break
+    // Apply sorting (only if not using 'newest' filter which already sorts)
+    if (selectedFilter !== 'newest') {
+      switch (sortBy) {
+        case 'featured':
+          filtered.sort((a, b) => {
+            // Sort featured items first, then non-featured
+            if (a.featured && !b.featured) return -1
+            if (!a.featured && b.featured) return 1
+            return 0
+          })
+          break
+        case 'newest':
+          filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
+          break
+        case 'name':
+          filtered.sort((a, b) => a.name.localeCompare(b.name))
+          break
+        case 'products':
+          filtered.sort((a, b) => b.products - a.products)
+          break
+      }
     }
 
     setFilteredCollections(filtered)
